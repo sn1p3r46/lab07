@@ -796,6 +796,8 @@ To close the loop of our service design, we will need to store (i.e., persist) d
 * [JUnit Tutorial][13]
 * [JPA tutorial from where we took some of the explanations][14]
 * Checkout also [Mashape][15] and signup with your GitHub account (we will try to use an API from there in the future sessions)
+
+Extra:
     
 [1]: https://drive.google.com/open?id=0B7ShzcEnCJFNWENNN1RpYU9xeUk&authuser=0
 [2]: https://drive.google.com/open?id=0B7ShzcEnCJFNQ2FfR21FUUk1Y1E&authuser=0
