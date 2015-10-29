@@ -78,6 +78,8 @@
         <dependency org="com.googlecode.json-simple" name="json-simple" rev="1.1.1"/>
 
         <dependency org="org.glassfish.jersey.media" name="jersey-media-json-jackson" rev="2.11"/>
+        <dependency org="junit" name="junit-dep" rev="4.8.2"/>
+
             
         
     </dependencies>
