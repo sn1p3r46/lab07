@@ -17,6 +17,7 @@ import java.util.List;
  * The persistent class for the "Person" database table.
  * 
  */
+
 @Entity
 @Table(name="\"Person\"")
 @NamedQuery(name="Person.findAll", query="SELECT p FROM Person p")
@@ -29,12 +30,11 @@ public class Person implements Serializable {
 	// This holds also for the other tables
 	// SQLITE implements auto increment ids through named sequences that are stored in a 
 	// special table named "sqlite_sequence"
-	@GeneratedValue
-//	(generator="sqlite_person")
-//	@TableGenerator(name="sqlite_person", table="sqlite_sequence",
-//	    pkColumnName="name", valueColumnName="seq",
-//	    pkColumnValue="Person")
-//	@Column(name="idPerson")
+	@GeneratedValue(generator="sqlite_person")
+	@TableGenerator(name="sqlite_person", table="sqlite_sequence",
+	    pkColumnName="name", valueColumnName="seq",
+	    pkColumnValue="Person")
+	@Column(name="idPerson")
 	private int idPerson;
 
 	@Column(name="lastname")

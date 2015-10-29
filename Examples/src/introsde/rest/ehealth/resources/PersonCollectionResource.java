@@ -30,8 +30,10 @@ import javax.ws.rs.core.UriInfo;
  * - will look into it later
  */
 
+/*
 @Stateless
 @LocalBean//Will map the resource to the URL /ehealth/v2
+*/
 @Path("/person")
 public class PersonCollectionResource {
 
@@ -43,13 +45,13 @@ public class PersonCollectionResource {
 	Request request;
 
 	// THIS IS NOT WORKING
-	@PersistenceUnit(unitName="introsde-jpa")
+	/*@PersistenceUnit(unitName="introsde-jpa")
 	EntityManager entityManager;
-	
+	*/
 	// THIS IS NOT WORKING
-    @PersistenceContext(unitName = "introsde-jpa",type=PersistenceContextType.TRANSACTION)
+    /*@PersistenceContext(unitName = "introsde-jpa",type=PersistenceContextType.TRANSACTION)
     private EntityManagerFactory entityManagerFactory;
-
+	*/
 	// Return the list of people to the user in the browser
 	@GET
 	@Produces({MediaType.TEXT_XML,  MediaType.APPLICATION_JSON ,  MediaType.APPLICATION_XML })

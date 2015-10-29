@@ -1,12 +1,8 @@
 # LAB07: Reading and writing from Databases & JPA (Java Persistence API)
 
-**Introduction to Service Design and Engineering | University of Trento | [Webpage](https://sites.google.com/site/introsdeunitn/lab-sessions/lab-session-7 "Permalink to LAB07: Reading and writing from Databases & JPA (Java Persistence API)")**
+**Introduction to Service Design and Engineering | University of Trento | [Webpage](https://sites.google.com/a/unitn.it/introsde_2015-16/lab-sessions/lab-session-7 "Permalink to LAB07: Reading and writing from Databases & JPA (Java Persistence API)")**
 
 To close the loop of our service design, we will need to store (i.e., persist) data in real databases. Nowadays, there are two major flavours of databases: **relational** and **non-relational** (also known as **NoSQL**). In this module, we will add database access to our RESTful services using the Java Persistence API (JPA). We will do so using SQLite as an exemple of relational database. 
-
-## Code
-
-Links: [Source code][3]
 
 ## Guiding Notes
 
@@ -800,25 +796,6 @@ Links: [Source code][3]
 * [JUnit Tutorial][13]
 * [JPA tutorial from where we took some of the explanations][14]
 * Checkout also [Mashape][15] and signup with your GitHub account (we will try to use an API from there in the future sessions)
-* To try a non-relational database, download [MongoDB][6] and install 
- * For windows, download the appropriate installer
- * For *nix systems, download the binaries and upack the compressed file somwhere in your PATH. 
- * For *nix systems you can also use the [packaged versions][7] through package managers
- * For how to use JPA+MongoDB, see [this tutorial][16]
- 
-    ```sh
-    # Homebrew (Mac)
-    brew install mongodb
-    
-    # Macports (Mac)
-    sudo port install mongodb
-    
-    # apt-get (Ubuntu)
-    sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
-    echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
-    sudo apt-get update
-    sudo apt-get install mongodb-org
-    ```
     
 [1]: https://drive.google.com/open?id=0B7ShzcEnCJFNWENNN1RpYU9xeUk&authuser=0
 [2]: https://drive.google.com/open?id=0B7ShzcEnCJFNQ2FfR21FUUk1Y1E&authuser=0
