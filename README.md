@@ -447,10 +447,8 @@ To close the loop of our service design, we will need to store (i.e., persist) d
 
 * Now run you tests by right click the Test class -> Run As -> JUnit
 
-### JPA Tutorial: Generating Entities (1)
+### JPA Tutorial: Generating Entities (**Eclipse only**) (1)
 
-* This part of the tutorial is **for eclipse only**
- * If not using eclipse, jump to the part of mapping relationships with JPA 
 * Open data source view and add a new conection (Right Click on *Database connections -> New..*)
 * **Add the correct SQLite Driver**
  * Click on the add button right of the "Drivers" select
