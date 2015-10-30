@@ -49,43 +49,43 @@ public class Person implements Serializable {
     
     // getters
     public int getIdPerson(){
-    	return idPerson;
+        return idPerson;
     }
 
     public String getLastname(){
-    	return lastname;
+        return lastname;
     }
     public String getName(){
-    	return name;
+        return name;
     }
     public String getUsername(){
-    	return username;
+        return username;
     }
     public Date getBirthdate(){
-    	return birthdate;
+        return birthdate;
     }
     public String getEmail(){
-    	return email;
+        return email;
     }
     
     // setters
     public void setIdPerson(int idPerson){
-    	this.idPerson = idPerson;
+        this.idPerson = idPerson;
     }
     public void setLastname(String lastname){
-    	this.lastname = lastname;
+        this.lastname = lastname;
     }
     public void setName(String name){
-    	this.name = name;
+        this.name = name;
     }
     public void setUsername(String username){
-    	this.username = username;
+        this.username = username;
     }
     public void setBirthdate(Date birthdate){
-    	this.birthdate = birthdate;
+        this.birthdate = birthdate;
     }
     public void setEmail(String email){
-    	this.email = email;
+        this.email = email;
     }
     
     public static Person getPersonById(int personId) {
