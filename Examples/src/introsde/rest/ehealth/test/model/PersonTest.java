@@ -33,7 +33,7 @@ public class PersonTest {
 		for (Person person : list) {
 			System.out.println("--> Person = "+person.toString());
 		}
-		assertTrue(list.size()>0);
+		assertTrue(list.size()>10);
 	}
 
 	// test for adding person without using the DAO object, but isntead using the entity manager 
@@ -48,7 +48,7 @@ public class PersonTest {
 		
 		// Arrange
 		Person at = new Person();
-		at.setName("Pinci");
+		at.setName("test");
 		at.setLastname("Palleto");
 		
 		Calendar cal = Calendar.getInstance();

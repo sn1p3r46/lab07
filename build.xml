@@ -119,6 +119,7 @@
         <!-- Run the JUnit Tests -->
         <!-- Output is XML, could also be plain-->
         <target name="junit">
+            <echo message="Run tests" />
             <junit printsummary="yes" haltonfailure="no">
                 <!-- Project classpath, must include junit.jar -->
                 <classpath>
