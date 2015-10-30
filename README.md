@@ -797,7 +797,13 @@ To close the loop of our service design, we will need to store (i.e., persist) d
 * [JPA tutorial from where we took some of the explanations][14]
 * Checkout also [Mashape][15] and signup with your GitHub account (we will try to use an API from there in the future sessions)
 
-Extra:
+### Deploy on Heroku
+```
+heroku login
+heroku create --stack cedar --buildpack https://github.com/IntroSDE/heroku-buildpack-ant.git
+git push heroku master
+heroku open
+```
     
 [1]: https://drive.google.com/open?id=0B7ShzcEnCJFNWENNN1RpYU9xeUk&authuser=0
 [2]: https://drive.google.com/open?id=0B7ShzcEnCJFNQ2FfR21FUUk1Y1E&authuser=0
