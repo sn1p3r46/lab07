@@ -127,9 +127,11 @@ To close the loop of our service design, we will need to store (i.e., persist) d
 
 * The **lifecoaach.sqlite** database presents an evolved data model. Open it in *Sqlite Browser* and explore the schema. You can also take a look to the physical ER model as presented by **lab07/lifecoach.png** 
 * Now that we have an idea of our data model, according to the tables in the database and their relationships, the next step is to create java classes that will represent this data model in our system. **This is what we call the MODEL**
-* Let's start with the Person. In the package **introsde.model** and add the first model for the table **Person**
+* Let's start with the Person. In the package **introsde.rest.ehealth.model** and add the first model for the table **Person**
 
     ```java
+    import introsde.rest.ehealth.model;
+    import java.util.Date;
     import java.io.Serializable;
     import javax.persistence.*;
     @Entity  // indicates that this class is an entity to persist in DB
