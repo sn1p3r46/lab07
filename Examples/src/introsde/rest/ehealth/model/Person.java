@@ -5,6 +5,11 @@ import introsde.rest.ehealth.dao.LifeCoachDao;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.text.ParseException;
+import java.util.Locale;
+
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -61,8 +66,10 @@ public class Person implements Serializable {
     public String getUsername(){
         return username;
     }
-    public Date getBirthdate(){
-        return birthdate;
+    public String getBirthdate(){
+        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+        // Get the date today using Calendar object.
+        return df.format(birthdate);
     }
     public String getEmail(){
         return email;
@@ -81,8 +88,10 @@ public class Person implements Serializable {
     public void setUsername(String username){
         this.username = username;
     }
-    public void setBirthdate(Date birthdate){
-        this.birthdate = birthdate;
+    public void setBirthdate(String bd) throws ParseException{
+        DateFormat format = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
+        Date date = format.parse(bd);
+        this.birthdate = date;
     }
     public void setEmail(String email){
         this.email = email;
