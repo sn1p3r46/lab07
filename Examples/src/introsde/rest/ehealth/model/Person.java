@@ -50,6 +50,9 @@ public class Person implements Serializable {
     public List<LifeStatus> getLifeStatus() {
         return lifeStatus;
     }
+    public void setLifeStatus(List<LifeStatus> param) {
+        this.lifeStatus = param;
+    }
     // add below all the getters and setters of all the private attributes
     
     // getters
