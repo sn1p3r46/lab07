@@ -63,19 +63,33 @@ public class PersonResource {
 
     @PUT
     @Consumes({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
-    public Response putPerson(Person person) {
-        System.out.println("--> Updating Person... " +this.id);
-        System.out.println("--> "+person.toString());
-        Person.updatePerson(person);
+	public Response putPerson(Person person) {
         Response res;
         Person existing = getPersonById(this.id);
 
+        // if the person is not in the db it will create a new one with the
+        // given ID 
         if (existing == null) {
-            res = Response.noContent().build();
-        } else {
+            System.out.println("--> The given ID is not in our DB " + id);
+            System.out.println("--> A new person will be created with this ID: " + id);
+            // we set the ID that the client provided from the URI
+            person.setIdPerson(id);
+            //Maybe also Person.savePerson(person) could be ok?
+            Person.updatePerson(person);
+            // actually i've putted the response to "created" because a new entity is just created
             res = Response.created(uriInfo.getAbsolutePath()).build();
+            // in my opinion this was not very correct: res = Response.noContent().build();
+        } else {
+            System.out.println("--> Updating Person... " +this.id);
+            System.out.println("--> "+person.toString());
             person.setIdPerson(this.id);
             Person.updatePerson(person);
+            res = Response.ok().build();
+            // we create an "ok" response because the request have been well accomplished
+            // OR maybe could be also good 
+            //res = Response.noContent().build();
+            // but NOT "created" because nothing have been created
+            //res = Response.created(uriInfo.getAbsolutePath()).build();
         }
         return res;
     }
@@ -89,14 +103,15 @@ public class PersonResource {
         Person.removePerson(c);
     }
 
-    public Person getPersonById(int personId) {
-        System.out.println("Reading person from DB with id: "+personId);
-
-        // this will work within a Java EE container, where not DAO will be needed
-        //Person person = entityManager.find(Person.class, personId); 
-
-        Person person = Person.getPersonById(personId);
-        System.out.println("Person: "+person.toString());
-        return person;
-    }
+	public Person getPersonById(int personId) {
+		System.out.println("Reading person from DB with id: "+personId);
+		//Person person = entityManager.find(Person.class, personId);
+		
+		Person person = Person.getPersonById(personId);
+		//I've added this if in order to not break things if the given ID is not in the DB
+		if (person!=null){
+	   		System.out.println("Person: "+person.toString());
+		}
+		return person;
+	}
 }
